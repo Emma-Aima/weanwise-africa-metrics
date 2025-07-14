@@ -50,35 +50,69 @@ export const mockUsers: UserProfile[] = [
   }
 ];
 
+// Generate heart rate history data
+export const generateHeartRateHistory = (childAge: number) => {
+  const baseHeartRate = childAge < 12 ? 120 : childAge < 24 ? 100 : 85;
+  const history = [];
+  
+  for (let i = 23; i >= 0; i--) {
+    const hour = 24 - i;
+    const variation = (Math.random() - 0.5) * 20;
+    const value = Math.round(baseHeartRate + variation);
+    
+    history.push({
+      time: `${hour.toString().padStart(2, '0')}:00`,
+      value: Math.max(60, Math.min(150, value)),
+      date: new Date(Date.now() - i * 60 * 60 * 1000).toISOString()
+    });
+  }
+  
+  return history;
+};
+
 // Generate realistic health data for demonstration
 export const generateHealthData = (childAge: number) => {
   const baseHeartRate = childAge < 12 ? 130 : childAge < 24 ? 115 : 105;
   const variation = Math.random() * 20 - 10;
+  const heartRateValue = Math.round(baseHeartRate + variation);
+  
+  // Determine status based on age-appropriate ranges
+  let heartRateStatus: 'normal' | 'warning' | 'critical' = 'normal';
+  if (childAge < 3) {
+    heartRateStatus = heartRateValue < 100 || heartRateValue > 150 ? 'critical' : 
+                     heartRateValue < 110 || heartRateValue > 140 ? 'warning' : 'normal';
+  } else if (childAge < 12) {
+    heartRateStatus = heartRateValue < 80 || heartRateValue > 120 ? 'critical' : 
+                     heartRateValue < 90 || heartRateValue > 110 ? 'warning' : 'normal';
+  } else {
+    heartRateStatus = heartRateValue < 60 || heartRateValue > 100 ? 'critical' : 
+                     heartRateValue < 70 || heartRateValue > 90 ? 'warning' : 'normal';
+  }
   
   return {
     heartRate: {
-      value: Math.round(baseHeartRate + variation),
+      value: heartRateValue,
       unit: 'bpm',
-      status: Math.abs(variation) < 5 ? 'normal' : Math.abs(variation) < 10 ? 'warning' : 'critical',
-      trend: variation > 0 ? 'up' : variation < 0 ? 'down' : 'stable'
+      status: heartRateStatus,
+      trend: variation > 0 ? 'up' as const : variation < 0 ? 'down' as const : 'stable' as const
     },
     spO2: {
       value: Math.round(96 + Math.random() * 3),
       unit: '%',
-      status: 'normal',
-      trend: 'stable'
+      status: 'normal' as const,
+      trend: 'stable' as const
     },
     sleepHours: {
       value: Math.round((childAge < 12 ? 16 : childAge < 24 ? 14 : 12) + (Math.random() * 2 - 1)),
       unit: 'hrs',
-      status: 'normal',
-      trend: 'stable'
+      status: 'normal' as const,
+      trend: 'stable' as const
     },
     activityLevel: {
       value: Math.round(60 + Math.random() * 40),
       unit: '%',
-      status: 'normal',
-      trend: Math.random() > 0.5 ? 'up' : 'down'
+      status: 'normal' as const,
+      trend: Math.random() > 0.5 ? 'up' as const : 'down' as const
     }
   };
 };
@@ -92,7 +126,9 @@ export const getNutritionRecommendations = (ageInMonths: number, healthStatus: s
       portion: "3-4 tablespoons",
       timing: "Morning & Evening",
       benefits: ["Energy", "B-Vitamins"],
-      priority: "high" as const
+      priority: "high" as const,
+      description: "A warm, nutritious porridge made from ground maize, perfect for growing children.",
+      healthBenefits: "Rich in carbohydrates for energy, B-vitamins for brain development, and fiber for healthy digestion."
     },
     {
       food: "Sweet Potato",
@@ -100,7 +136,9 @@ export const getNutritionRecommendations = (ageInMonths: number, healthStatus: s
       portion: "2 tablespoons mashed",
       timing: "Lunch",
       benefits: ["Vitamin A", "Fiber", "Potassium"],
-      priority: "high" as const
+      priority: "high" as const,
+      description: "Colorful and naturally sweet root vegetables that children love.",
+      healthBenefits: "Excellent source of Vitamin A for healthy vision, immune system support, and potassium for heart health."
     },
     {
       food: "Ground Nuts",
@@ -108,7 +146,9 @@ export const getNutritionRecommendations = (ageInMonths: number, healthStatus: s
       portion: "1 tablespoon paste",
       timing: "Snack",
       benefits: ["Protein", "Healthy Fats"],
-      priority: "medium" as const
+      priority: "medium" as const,
+      description: "Protein-rich nuts ground into a smooth paste, perfect for snacks.",
+      healthBenefits: "High in protein for muscle development, healthy fats for brain growth, and essential amino acids."
     }
   ];
 
@@ -119,7 +159,9 @@ export const getNutritionRecommendations = (ageInMonths: number, healthStatus: s
       portion: "1 teaspoon powder",
       timing: "Mixed with porridge",
       benefits: ["Iron", "Vitamin C", "Protein"],
-      priority: "high" as const
+      priority: "high" as const,
+      description: "Nutrient-dense leaves from the miracle tree, packed with vitamins and minerals.",
+      healthBenefits: "Contains 25x more iron than spinach, supports immune system and provides essential amino acids."
     });
   }
 
@@ -130,7 +172,9 @@ export const getNutritionRecommendations = (ageInMonths: number, healthStatus: s
       portion: "1/2 teaspoon",
       timing: "Added to vegetables",
       benefits: ["Vitamin A", "Healthy Fats"],
-      priority: "medium" as const
+      priority: "medium" as const,
+      description: "Natural red oil rich in nutrients, perfect for cooking vegetables.",
+      healthBenefits: "High in Vitamin A and E, supports brain development and provides healthy fats for growth."
     });
   }
 
