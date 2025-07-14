@@ -1,5 +1,5 @@
 
-import { Home, Heart, Apple, Users, Settings, Bell } from "lucide-react";
+import { Home, Heart, Apple, Users, Settings, Bell, Info } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import {
   Sidebar,
@@ -18,6 +18,7 @@ const mainItems = [
   { title: "Health Monitor", url: "/health", icon: Heart },
   { title: "Nutrition", url: "/nutrition", icon: Apple },
   { title: "Care Team", url: "/team", icon: Users },
+  { title: "About Us", url: "/about", icon: Info },
 ];
 
 const settingsItems = [
@@ -26,7 +27,7 @@ const settingsItems = [
 ];
 
 export function AppSidebar() {
-  const { state } = useSidebar();
+  const { state } = useSudebar();
   const location = useLocation();
   const currentPath = location.pathname;
   const collapsed = state === "collapsed";
@@ -36,7 +37,7 @@ export function AppSidebar() {
     isActive ? "bg-primary text-primary-foreground font-medium" : "hover:bg-accent/50";
 
   return (
-    <Sidebar className={collapsed ? "w-14" : "w-64"} collapsible="icon">
+    <Sidebar className="border-r" collapsible="icon">
       <SidebarContent className="px-2">
         <div className="p-4 border-b border-sidebar-border">
           <div className="flex items-center gap-2">

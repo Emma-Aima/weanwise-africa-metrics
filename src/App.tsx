@@ -12,6 +12,7 @@ import Nutrition from "./pages/Nutrition";
 import Alerts from "./pages/Alerts";
 import Settings from "./pages/Settings";
 import CareTeam from "./pages/CareTeam";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/alerts" element={<Alerts />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/team" element={<CareTeam />} />
+          <Route path="/about" element={<About />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

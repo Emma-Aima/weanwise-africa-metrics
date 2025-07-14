@@ -53,6 +53,13 @@ export default function Index() {
         <AppSidebar />
         <main className="flex-1 bg-gradient-to-br from-blue-50 via-green-50 to-yellow-50">
           <div className="p-6 space-y-8">
+            {/* SDG Statement */}
+            <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-4 rounded-lg shadow-lg mb-6">
+              <h2 className="text-lg font-bold text-center">
+                Weanwise Africa is addressing the SDG 3: Good Health & Wellbeing in Sub-Saharan Africa
+              </h2>
+            </div>
+
             {/* Header */}
             <div className="text-center mb-8">
               <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-2">
