@@ -27,7 +27,7 @@ const settingsItems = [
 ];
 
 export function AppSidebar() {
-  const { state } = useSudebar();
+  const { state } = useSidebar();
   const location = useLocation();
   const currentPath = location.pathname;
   const collapsed = state === "collapsed";
