@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Heart, Activity, TrendingUp, Clock, AlertTriangle, CheckCircle } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
+import Footer from "@/components/Footer";
 
 const generateHeartRateHistory = (ageInMonths: number) => {
   const getAgeSpecificRange = (age: number) => {
@@ -271,6 +272,7 @@ export default function HealthMonitor() {
               </div>
             </div>
           </main>
+          <Footer />
         </div>
       </div>
     </SidebarProvider>

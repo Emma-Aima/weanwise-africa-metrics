@@ -67,11 +67,11 @@ export default function Index() {
               </h1>
               <p className="text-gray-600 mb-6">Your child's health and nutrition companion</p>
               
-              {/* Hero Image - Changed to children */}
+              {/* Hero Image - Updated with the new image */}
               <div className="relative w-full max-w-4xl mx-auto mb-8">
                 <img 
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=400&fit=crop&crop=center"
-                  alt="Happy children aged 1-5 years playing and learning together"
+                  src="/lovable-uploads/445541a5-0332-481c-85be-23474d239a89.png"
+                  alt="African family enjoying a nutritious meal together - parents and child in traditional colorful clothing"
                   className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"></div>
@@ -240,7 +240,7 @@ export default function Index() {
             {/* Health Overview */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <HealthMetricsCard
-                childName="Emma"
+                childName="Mirabel"
                 age="12 months"
                 heartRate={{ value: 98, unit: "bpm", status: "normal", trend: "stable" }}
                 spO2={{ value: 98, unit: "%", status: "normal", trend: "stable" }}

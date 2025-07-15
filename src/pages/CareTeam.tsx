@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
@@ -18,6 +17,7 @@ import {
   UserCheck,
   HeartHandshake
 } from "lucide-react";
+import Footer from "@/components/Footer";
 
 interface CareTeamMember {
   id: number;
@@ -310,6 +310,7 @@ const CareTeam = () => {
               ))}
             </div>
           </main>
+          <Footer />
         </div>
       </div>
     </SidebarProvider>
