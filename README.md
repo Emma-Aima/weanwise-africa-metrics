@@ -255,4 +255,4 @@ The platform emphasizes:
 
 ---
 
-*Transforming child health outcomes in Sub-Saharan Africa through technology-driven solutions.*
+**Transforming child health outcomes in Sub-Saharan Africa through technology-driven solutions.**
