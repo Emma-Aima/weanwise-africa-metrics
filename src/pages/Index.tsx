@@ -1,3 +1,4 @@
+
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import { Button } from "@/components/ui/button";
@@ -67,12 +68,13 @@ export default function Index() {
               </h1>
               <p className="text-gray-600 mb-6">Your child's health and nutrition companion</p>
               
-              {/* Hero Image - Updated with the new image */}
+              {/* Hero Image - Adjusted positioning to show faces better */}
               <div className="relative w-full max-w-4xl mx-auto mb-8">
                 <img 
                   src="/lovable-uploads/445541a5-0332-481c-85be-23474d239a89.png"
                   alt="African family enjoying a nutritious meal together - parents and child in traditional colorful clothing"
-                  className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                  className="w-full h-64 md:h-80 object-cover object-center rounded-lg shadow-lg"
+                  style={{ objectPosition: 'center 30%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"></div>
                 <div className="absolute bottom-4 left-4 text-white">
