@@ -59,6 +59,22 @@ export default function About() {
           </header>
 
           <main className="flex-1 p-6 space-y-8 overflow-auto">
+            {/* Hero Section with Image */}
+            <Card className="bg-white shadow-lg overflow-hidden">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1200&h=400&fit=crop&crop=center"
+                  alt="African community healthcare setting"
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 text-white">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-2">Transforming Child Health in Sub-Saharan Africa</h2>
+                  <p className="text-lg opacity-90">Supporting mothers and caregivers with technology-driven health solutions</p>
+                </div>
+              </div>
+            </Card>
+
             {/* Introduction */}
             <Card className="bg-white shadow-lg">
               <CardHeader>
@@ -75,6 +91,25 @@ export default function About() {
                   This gap is compounded by limited access to nutritionally appropriate yet locally available food options, leaving caregivers unsure of how to nourish their children with confidence and consistency.
                 </p>
               </CardContent>
+            </Card>
+
+            {/* Community Impact Image */}
+            <Card className="bg-white shadow-lg overflow-hidden">
+              <div className="md:flex">
+                <div className="md:w-1/2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=600&h=400&fit=crop&crop=center"
+                    alt="Mothers and children in Sub-Saharan Africa community setting"
+                    className="w-full h-64 md:h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 md:w-1/2 flex flex-col justify-center">
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">Our Mission</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    WeanWise Africa is dedicated to reducing child mortality and malnutrition through innovative health monitoring and nutrition guidance. We empower mothers and caregivers with the tools and knowledge they need to ensure their children thrive during the critical weaning period.
+                  </p>
+                </div>
+              </div>
             </Card>
 
             {/* Problem Statement */}

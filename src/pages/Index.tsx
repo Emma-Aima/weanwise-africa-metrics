@@ -60,12 +60,27 @@ export default function Index() {
               </h2>
             </div>
 
-            {/* Header */}
+            {/* Header with Image */}
             <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-2">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-4">
                 WeanWise Africa Dashboard
               </h1>
-              <p className="text-gray-600">Your child's health and nutrition companion</p>
+              <p className="text-gray-600 mb-6">Your child's health and nutrition companion</p>
+              
+              {/* Hero Image */}
+              <div className="relative w-full max-w-4xl mx-auto mb-8">
+                <img 
+                  src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=800&h=400&fit=crop&crop=center"
+                  alt="African mothers and children in Sub-Saharan Africa"
+                  className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"></div>
+                <div className="absolute bottom-4 left-4 text-white">
+                  <p className="text-sm md:text-base font-medium">
+                    Empowering mothers and children across Sub-Saharan Africa
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Quick Stats */}
