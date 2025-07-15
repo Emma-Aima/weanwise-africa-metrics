@@ -5,13 +5,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Apple, Clock, Heart, Users, ChefHat, Utensils } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const nutritionMeals = [
   {
     id: 1,
     name: "Maize Porridge",
     localName: "Ugali wa Mahindi",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1551887373-6edba6dacbb1?w=600&h=400&fit=crop",
     description: "A warm, nutritious porridge made from ground maize flour, perfect for growing children. Rich in carbohydrates and essential nutrients.",
     healthBenefits: "Rich in carbohydrates for energy, B-vitamins for brain development, and fiber for healthy digestion. Provides sustained energy for active children.",
     portion: "1/2 cup",
@@ -26,7 +27,7 @@ const nutritionMeals = [
     id: 2,
     name: "Sweet Potato Mash",
     localName: "Viazi Vitamu",
-    image: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1586182845862-a85e2e76bccb?w=600&h=400&fit=crop",
     description: "Colorful and naturally sweet root vegetables that children love. Mashed to perfect consistency for easy eating.",
     healthBenefits: "Excellent source of Vitamin A for healthy vision, immune system support, and potassium for heart health. Natural sweetness appeals to children.",
     portion: "1/3 cup",
@@ -41,7 +42,7 @@ const nutritionMeals = [
     id: 3,
     name: "Ground Nuts Paste",
     localName: "Karanga",
-    image: "https://images.unsplash.com/photo-1566454544558-6a42a31fe4e8?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=600&h=400&fit=crop",
     description: "Protein-rich nuts ground into a smooth paste, perfect for snacks and adding to meals for extra nutrition.",
     healthBenefits: "High in protein for muscle development, healthy fats for brain growth, and essential amino acids. Excellent source of plant-based protein.",
     portion: "2 tablespoons",
@@ -56,7 +57,7 @@ const nutritionMeals = [
     id: 4,
     name: "Mixed Vegetable Stew",
     localName: "Mchuzi wa Mboga",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=400&fit=crop",
     description: "A colorful mix of locally available vegetables cooked in a nutritious stew, perfect for introducing various flavors and textures.",
     healthBenefits: "Packed with vitamins, minerals, and antioxidants from various vegetables. Supports immune system and overall growth.",
     portion: "1/2 cup",
@@ -71,7 +72,7 @@ const nutritionMeals = [
     id: 5,
     name: "Mashed Bananas",
     localName: "Ndizi",
-    image: "https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=600&h=400&fit=crop",
     description: "Sweet, naturally soft bananas mashed to perfect consistency. An excellent first food for babies and energy source for toddlers.",
     healthBenefits: "Natural sugars for quick energy, potassium for heart health, and vitamin B6 for brain development. Easy to digest and naturally sweet.",
     portion: "1/2 banana",
@@ -86,7 +87,7 @@ const nutritionMeals = [
     id: 6,
     name: "Fish and Rice",
     localName: "Samaki na Wali",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop",
     description: "Fresh fish with rice, providing complete proteins and essential omega-3 fatty acids crucial for brain development.",
     healthBenefits: "Complete proteins for growth, omega-3 fatty acids for brain development, and easy-to-digest carbohydrates for energy.",
     portion: "1/3 cup",
@@ -321,6 +322,7 @@ export default function Nutrition() {
               </CardContent>
             </Card>
           </main>
+          <Footer />
         </div>
       </div>
     </SidebarProvider>

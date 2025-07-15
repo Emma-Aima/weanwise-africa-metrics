@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -25,19 +24,19 @@ interface NutritionRecommendationsProps {
 const mealImages = [
   {
     food: "Maize Porridge",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1551887373-6edba6dacbb1?w=400&h=300&fit=crop",
     description: "A warm, nutritious porridge made from ground maize, perfect for growing children.",
     healthBenefits: "Rich in carbohydrates for energy, B-vitamins for brain development, and fiber for healthy digestion."
   },
   {
     food: "Sweet Potato",
-    image: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1586182845862-a85e2e76bccb?w=400&h=300&fit=crop",
     description: "Colorful and naturally sweet root vegetables that children love.",
     healthBenefits: "Excellent source of Vitamin A for healthy vision, immune system support, and potassium for heart health."
   },
   {
     food: "Ground Nuts",
-    image: "https://images.unsplash.com/photo-1566454544558-6a42a31fe4e8?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=400&h=300&fit=crop",
     description: "Protein-rich nuts ground into a smooth paste, perfect for snacks.",
     healthBenefits: "High in protein for muscle development, healthy fats for brain growth, and essential amino acids."
   }

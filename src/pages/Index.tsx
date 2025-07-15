@@ -1,4 +1,3 @@
-
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import { Button } from "@/components/ui/button";
@@ -8,6 +7,7 @@ import { Heart, Users, Apple, Bell, Settings, Activity, TrendingUp, Clock, Alert
 import { Link } from "react-router-dom";
 import HealthMetricsCard from "@/components/HealthMetricsCard";
 import NutritionRecommendations from "@/components/NutritionRecommendations";
+import Footer from "@/components/Footer";
 
 // Mock data for the dashboard
 const mockHeartRateHistory = [
@@ -67,17 +67,17 @@ export default function Index() {
               </h1>
               <p className="text-gray-600 mb-6">Your child's health and nutrition companion</p>
               
-              {/* Hero Image */}
+              {/* Hero Image - Changed to children */}
               <div className="relative w-full max-w-4xl mx-auto mb-8">
                 <img 
-                  src="https://images.unsplash.com/photo-1466721591366-2d5fba72006d?w=800&h=400&fit=crop&crop=center"
-                  alt="African mothers and children in Sub-Saharan Africa"
+                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=400&fit=crop&crop=center"
+                  alt="Happy children aged 1-5 years playing and learning together"
                   className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <p className="text-sm md:text-base font-medium">
-                    Empowering mothers and children across Sub-Saharan Africa
+                    Nurturing healthy development for children aged 1-5 years
                   </p>
                 </div>
               </div>
@@ -257,6 +257,7 @@ export default function Index() {
               />
             </div>
           </div>
+          <Footer />
         </main>
       </div>
     </SidebarProvider>

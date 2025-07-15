@@ -1,4 +1,3 @@
-
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,6 +12,7 @@ import {
   Moon,
   Zap
 } from "lucide-react";
+import Footer from "@/components/Footer";
 
 export default function About() {
   const keyMetrics = [
@@ -63,8 +63,8 @@ export default function About() {
             <Card className="bg-white shadow-lg overflow-hidden">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1200&h=400&fit=crop&crop=center"
-                  alt="African community healthcare setting"
+                  src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1200&h=400&fit=crop&crop=center"
+                  alt="Mothers with their children in a healthcare center setting"
                   className="w-full h-64 md:h-80 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -98,8 +98,8 @@ export default function About() {
               <div className="md:flex">
                 <div className="md:w-1/2">
                   <img 
-                    src="https://images.unsplash.com/photo-1517022812141-23620dba5c23?w=600&h=400&fit=crop&crop=center"
-                    alt="Mothers and children in Sub-Saharan Africa community setting"
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&crop=center"
+                    alt="Group of little children in a school setting"
                     className="w-full h-64 md:h-full object-cover"
                   />
                 </div>
@@ -204,6 +204,7 @@ export default function About() {
               </CardContent>
             </Card>
           </main>
+          <Footer />
         </div>
       </div>
     </SidebarProvider>
